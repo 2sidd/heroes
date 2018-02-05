@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
+var mongodb = require('mongodb');
+var MongoClient = require('mongodb').MongoClient;
 
 // Get our API routes
 const api = require('./server/routes/api');
@@ -17,4 +19,5 @@ app.get('*', (req, res) => {
 const port = process.env.PORT || '3000';
 app.set('port', port);
 const server = http.createServer(app);
+
 server.listen(port, () => console.log(`API running on localhost:${port}`));
