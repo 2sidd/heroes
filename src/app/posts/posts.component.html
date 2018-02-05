@@ -1,8 +1,9 @@
 <div class="container">
     <div class="row" *ngFor="let post of posts">
         <div class="card card-block" style='background-image:url({{post.attributes.image_card_background}})'>
-            <a href={{post.attributes.links.self}} class="card-link">
-                <img src={{post.attributes.image_splash}} alt="{{post.attributes.name}}" style="width:42px;height:42px;border:0;"> {{ post.attributes.name }}</a>
+            <a href={{post.links.self}} class="card-link">
+                <img src={{post.attributes.image_splash}} alt="{{post.attributes.name}}" style="width:42px;height:42px;border:0;"> {{ post.attributes.name }}
+            </a>
         </div>
     </div>
 </div>
